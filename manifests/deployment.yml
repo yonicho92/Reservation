@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: yonichoreservation 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: yonichoreservation 
+    spec:
+      containers:
+        - name: yonichoreservation 
+          image: adm20acr.azurecr.io/yonichoreservation
+          ports:
+          - containerPort: 8080
